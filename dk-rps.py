@@ -109,7 +109,7 @@ class Game:
         print("Game start!")
         valid_input = False
         rounds = 0
-        while valid_input == False:
+        while valid_input is False:
             user_rounds = input("How many rounds do you want to play?:")
             try:
                 rounds = int(user_rounds)
@@ -120,7 +120,7 @@ class Game:
         for round in range(rounds):
             print(f"Round {round}:")
             self.play_round()
-        print(f"Score: Player One:{self.p1_score}; Player Two:{self.p2_score}")
+            print(f"Score: Player One:{self.p1_score}; Player Two:{self.p2_score}")
         if self.p1_score > self.p2_score:
             print("Player One Wins")
         elif self.p2_score > self.p1_score:
