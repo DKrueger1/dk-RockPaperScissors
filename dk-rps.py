@@ -35,7 +35,7 @@ class RandomPlayer(Player):
 class HumanPlayer(Player):
     def move(self):
         while True:
-            human_move = input("Please enter your move:")
+            human_move = input("Please enter your move:").lower()
             if human_move.lower() not in moves:
                 print("Available moves: Rock, Paper, Scissors")
                 print("Please enter a move from the list and try again.")
@@ -120,7 +120,8 @@ class Game:
         for round in range(rounds):
             print(f"Round {round}:")
             self.play_round()
-            print(f"Score: Player One:{self.p1_score}; Player Two:{self.p2_score}")
+            print(f"'Score: Player One:{self.p1_score}'\
+                '; Player Two:{self.p2_score}'")
         if self.p1_score > self.p2_score:
             print("Player One Wins")
         elif self.p2_score > self.p1_score:
